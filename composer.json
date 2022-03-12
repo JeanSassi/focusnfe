@@ -2,7 +2,9 @@
     "name": "jeansassi/laravel-focusnfe",
     "description": "Laravel implementação com a API FOCUS NFE para Emissão de Nota Fiscal Eletrônica",
     "license": "Apache-2.0",
+    "type": "library",
     "homepage": "sassi.tec.br",
+    "version": "1.0.0",
     "keywords": [
         "Focus NFE",
         "Laravel"
