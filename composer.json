@@ -10,7 +10,7 @@
     "require": {
         "php": ">=7.1"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Jean Sassi",
