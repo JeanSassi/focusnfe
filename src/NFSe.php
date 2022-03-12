@@ -6,12 +6,14 @@ class NFSe extends Ws
 {
 
 
+
     public function enviar()
     {
         $ch = curl_init();
 
         $url = $this->getHost() . '/v2/nfse?ref=' . $this->getRef();
 
+        var_dump($url);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -19,7 +21,6 @@ class NFSe extends Ws
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
         curl_setopt($ch, CURLOPT_USERPWD, $this->getToken() . ':');
         $response = curl_exec($ch);
-
 
         return json_decode($response);
     }
@@ -62,7 +63,7 @@ class NFSe extends Ws
         return json_decode($response);
     }
 
-    public function email($ref, array $emails)
+    public function email($ref, $emails)
     {
         $ch = curl_init();
 

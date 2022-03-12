@@ -2,7 +2,6 @@
 
 namespace JeanSassi\Focusnfe;
 
-use JeanSassi\Focusnfe\Exceptions\WsException;
 
 
 class Ws
@@ -21,6 +20,11 @@ class Ws
     private $forms;
     private $config;
 
+
+    public function __construct()
+    {
+        $this->setConfig(config('focusnfe'));
+    }
 
     public function getToken(){
         return $this->token;
@@ -69,6 +73,8 @@ class Ws
             $this->host =  $this->servers['homologacao'];
             $this->token = $this->config['TOKEN_HOMOLOGACAO'];
         }
+
+
 
     }
 
